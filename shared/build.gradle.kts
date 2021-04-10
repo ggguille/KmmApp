@@ -4,6 +4,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
     id("com.android.library")
+    id("kotlin-android-extensions")
     id("com.squareup.sqldelight")
 }
 
@@ -17,17 +18,17 @@ kotlin {
         }
     }
 
-    val coroutinesVersion = "1.3.9-native-mt"
-    val serializationVersion = "1.0.0-RC"
     val ktorVersion = "1.4.0"
+    val serializationVersion = "1.0.0-RC"
     val sqlDelightVersion: String by project
+    val coroutinesVersion = "1.3.9-native-mt"
 
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
                 implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
             }
