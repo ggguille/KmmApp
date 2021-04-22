@@ -1,5 +1,6 @@
 # KmmApp
-Kotlin Multiplatform Hands-on
+[Kotlin Multiplatform Hands-on](https://play.kotlinlang.org/hands-on/overview)
+Networking and Data Storage
 
 ### Dependencies
 - kotlinx.coroutines – we will use coroutines for asynchronous code.
